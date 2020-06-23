@@ -1,4 +1,4 @@
-
+"This Algo is some how greedy(Brute force) and takes 0(2^n) because as n increases the time complexity also does "
 
 """
 Given a string S and a set of words D, find the longest word in D that is a subsequence of S.
@@ -25,8 +25,6 @@ do a loop starting with the biggest and check if its in the combination will us 
 import  itertools
 S = "abppplee"
 D = {"able", "ale", "apple", "bale", "kangaroo"}
-
-
 def find_longest_word_in_string(S, D):
 
     slist = []
