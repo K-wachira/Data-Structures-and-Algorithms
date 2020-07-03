@@ -21,7 +21,7 @@ it appears on the s-string
 
 The rows(keys) and letters(values) are grouped in a  dictionary
 
-    The letter(values) are concatenated in the order of the rows  and returned as one String
+The letter(values) are concatenated in the order of the rows  and returned as one String
 
 """
 
