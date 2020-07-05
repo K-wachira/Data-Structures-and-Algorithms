@@ -10,7 +10,7 @@ On this solution it finds the biggest common substring that is in all the words 
 considering where it is located on the strings.
 NB if strs = ['ca', 'a] return is supposed to be ''
     but this function returns 'a' which is the longest substring on strs
-see LongestCommonPrefix2.py for the correct function/approach 
+see LongestCommonPrefix2.py for the correct function/approach
 
 """
 
