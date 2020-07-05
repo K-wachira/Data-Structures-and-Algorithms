@@ -1,5 +1,5 @@
 # The Algorithms - Python
-![](https://img.shields.io/github/last-commit/k-wachira/Data-Structures-and-Algorithms);
+![](https://img.shields.io/github/last-commit/k-wachira/Data-Structures-and-Algorithms)&nbsp;
 ![](https://img.shields.io/github/repo-size/k-wachira/Data-Structures-and-Algorithms?style=flat-square  )&nbsp;
 
 
