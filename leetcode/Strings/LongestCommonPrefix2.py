@@ -5,7 +5,7 @@ If there is no common prefix, return an empty string "".
 
 This function works proper,
 
-:: Approach 
+:: Approach
 Create a nested list(tuple) with the tuple containing letters that are on the same index
 on the words on strs.
 
