@@ -22,6 +22,6 @@ def rotate( nums ,k):
         nums.pop()
         print(nums)
 
-nums =  [1,2,3,4,5,6,7]
+nums =  [1,2,3,4]
 k = 3
 rotate(nums, k)
