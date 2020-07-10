@@ -12,8 +12,7 @@ def letterCombinations(digits):
              '9': ['w', 'x', 'y', 'z']}
 
     def backtrack(combination, next_digits):
-        print(combination)
-        print(next_digits)
+
         # if there is no more digits to check
         if len(next_digits) == 0:
             # the combination is done
@@ -23,12 +22,15 @@ def letterCombinations(digits):
             # iterate over all letters which map
             # the next available digit
             for letter in phone[next_digits[0]]:
+                print(combination, letter)
+
                 # append the current letter to the combination
                 # and proceed to the next digits
                 backtrack(combination + letter, next_digits[1:])
 
     output = []
     if digits:
+        print(digits)
         backtrack("", digits)
 
     print(output)
@@ -41,5 +43,5 @@ def letterCombinations(digits):
 
 
 
-digits = '73'
+digits = '735'
 letterCombinations(digits)
