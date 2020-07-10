@@ -15,15 +15,12 @@ if an element on the unsliced part of the list
 is not in the sliced part of the list insert it to index lensofar
 do this until there is no element in nums that is not in sliced part of nums
 
-
-
-
-
 """
 def removeDuplicates(nums) :
     if len(nums) == 0: return 0
     lensofar = 1
     nums.insert(0, min(nums))
+
     for j in (nums[lensofar:]):
         if j not in (nums[:lensofar]):
             nums.insert(lensofar, j)

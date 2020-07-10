@@ -40,8 +40,6 @@ def convert(s ,numRows):
             grid[row] = s[i]
         elif row in grid.keys():
             grid[row] = grid[row]+ s[i]
-
-
         if row == 1:
             goingForward = True
         elif row ==numRows:

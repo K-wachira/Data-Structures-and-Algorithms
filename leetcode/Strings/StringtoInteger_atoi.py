@@ -22,6 +22,9 @@ Assume we are dealing with an environment which could only store integers within
 import math
 
 def myAtoi(str):
+    str.isspace()
+    str.lstrip()
+
     strippedstr = ''
     isNegative = False
     pos_num = ''
