@@ -56,7 +56,6 @@ def lengthOfLongestSubstring(s):
                 cur_len -=1
             window.add(ch)
             cur_len+=1
-
             max_len = max(max_len, cur_len)
 
         print(max_len)

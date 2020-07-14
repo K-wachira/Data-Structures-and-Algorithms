@@ -1,6 +1,9 @@
 """
 https://leetcode.com/problems/search-insert-position/submissions/
 
+Time complexity = O(nlogn)
+Binary search approach
+
 """
 
 def searchInsert(nums, target):
