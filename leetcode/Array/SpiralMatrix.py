@@ -3,8 +3,6 @@
 
 Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
 
-
-
 """
 
 import numpy as np
@@ -33,10 +31,8 @@ def spiralOrder(matrix):
 
 
 
-matrix =   [[1,2,3,4],
-            [5,6,7,8],
-            [9,10,11,12],
-            [13,14,15,16]
+matrix =   [[3],
+            [4]
             ]
 
 spiralOrder(matrix)
