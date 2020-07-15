@@ -1,6 +1,15 @@
 from _bisect import bisect_right
 from bisect import bisect_left
 
+"""
+source of solution **
+:::https://leetcode.com/problems/3sum/discuss/7482/Fastest-Python-solution-180-ms
+
+Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+
+
+
+"""
 
 class Solution:
     def __init__(self, n):

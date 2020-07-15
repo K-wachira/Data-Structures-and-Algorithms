@@ -4,10 +4,8 @@ def maxSubArray(nums):
 
     far_right = 1
 
-    if max(nums) > 0:
-        maxxi = min(nums)
-    else:
-        maxxi = nums[0]
+    maxxi = min(nums) if max(nums) > 0  else  maxxi = nums[0]
+    
     for i in range(len(nums)):
         while far_right <= len(nums):
             window = nums[i:far_right]
