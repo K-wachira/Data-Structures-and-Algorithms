@@ -14,7 +14,6 @@ Given an array nums of n integers, are there elements a, b, c in nums such that 
 def threeSum(n):
     f={}
     for i in n:f[i]=f.get(i,0)+1
-
     print(f)
     n=sorted(f)
     a=[]
