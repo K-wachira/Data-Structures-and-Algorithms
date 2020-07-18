@@ -1,20 +1,18 @@
 def canJump(nums):
-    target  = len(nums)
+    if not nums: return True
     n = 0
-
-
-    while n  <= target:
-        print("nunu")
-        n = n + nums[n]
-        if n == target:
-            print("Found")
-        elif n > target:
+    for i in range(len(nums)-1):
+        if n == len(nums):
+            print(True)
+        elif n > len(nums):
             print(False)
 
-    print(False)
+        if nums[n]==0:
+            print(False)
+        else:
+            n = nums
 
 
 
-
-nums = [2,3,1,1,4]
+nums =  [2,3,1,1,4]
 canJump(nums)
