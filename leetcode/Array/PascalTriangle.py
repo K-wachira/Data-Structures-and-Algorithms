@@ -12,7 +12,6 @@ def generate(numRows):
     z =1
 
     while z < numRows:
-        print(z)
         z+=1
         if (outputList[len(outputList)-1]) == [1]:
             outputList.append([1,1])
