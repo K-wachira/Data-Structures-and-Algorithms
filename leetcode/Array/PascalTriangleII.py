@@ -1,3 +1,11 @@
+"""
+Runtime: 40 ms, faster than 28.24% of Python3 online submissions for Pascal's Triangle II.
+Memory Usage: 13.8 MB, less than 69.38% of Python3 online submissions for Pascal's Triangle II.
+
+https://leetcode.com/problems/pascals-triangle-ii/submissions/
+"""
+
+
 def getRow(rowIndex):
     numRows = rowIndex+1
     outputList = [[1]]
