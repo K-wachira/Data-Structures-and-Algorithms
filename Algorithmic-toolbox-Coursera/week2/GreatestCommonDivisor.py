@@ -1,9 +1,11 @@
-def gcd(a,b):
-    if b == 0:
-        print(a)
-    gcd(b, a%b)
+import sys
 
+
+def gcd(x, y):
+   while(y):
+       x, y = y, x % y
+   return (x)
 if __name__ == '__main__':
-    a = int(input())
-    b = int(input())
-    (gcd(a,b))
+    input = sys.stdin.read()
+    input_x, input_y = map(int, input.split())
+    print(gcd(input_x,input_y))
