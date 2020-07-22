@@ -1,8 +1,9 @@
 def canJump(nums):
-    m = 0
-    for i, n in enumerate(nums):
-        if i > m:return False
-        m = max(m, i+n)
+
+    stepIndex = 0
+    for index, number in enumerate(nums):
+        if index > stepIndex:return False
+        stepIndex = max(stepIndex, index+number)
     return True
 
 
