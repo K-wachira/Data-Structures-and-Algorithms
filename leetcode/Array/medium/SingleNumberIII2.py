@@ -9,7 +9,7 @@ def singleNumber(nums):
     nonDublicates = set()
     for i in nums:
         if i in nonDublicates:
-            nonDublicates.remove(i)
+            nonDublicates.discard(i)
         else:
             nonDublicates.add(i)
     return list(nonDublicates)
