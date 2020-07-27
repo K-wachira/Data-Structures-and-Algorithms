@@ -11,14 +11,10 @@ def isAlienSorted(words, order):
         for x, j in enumerate(words[i]):
             if i <= len(words) - 2:
                 if len(w) > len(words[i + 1]):
-                    words[i + 1] = words[i + 1] + "   x"
+                    words[i + 1] = words[i + 1] + "   x" #did this so as to ensure every letter can be compared to something
                 if f[j] > f[words[i + 1][x]]:
-                    print(f[j], f[words[i + 1][x]])
-                    print(j, words[i + 1][x])
                     return False
                 elif f[j] < f[words[i + 1][x]]:
-                    print(f[j], f[words[i + 1][x]])
-                    print(j, words[i + 1][x])
                     break
     return True
     # create a dictionary from the order

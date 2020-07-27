@@ -2,17 +2,15 @@ import sys
 
 
 def FibanacciNumber(n):
-    if n == 0: return 0
-    ans = [0,1]
-    i =0
+    if n <= 1:
+        return n
 
-    while i < n:
-        ans.append(ans[len(ans)-1] + ans[len(ans)-2])
-        i+=1
-    answer =  ans[len(ans)-2]
-    laststr = str(answer)[-1]
-    print(int(laststr))
+    previous,   current  = 0 , 1
+    for _ in range(n - 1):
+        previous, current = current, previous + current
+
+    return current % 10
 if __name__ == '__main__':
-    input = input()
+    input = sys.stdin.read()
     n = int(input)
-    FibanacciNumber(n)
+    print(FibanacciNumber(n))

@@ -34,7 +34,7 @@ class Solution:
         return a
 
 
-n = [0,0,0,0]
+n =[1,2,0]
 
 answer = Solution(n)
 
