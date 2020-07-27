@@ -34,31 +34,23 @@ def firstBadVersion(n):
         # if mid and mid +1 are good go to upper bank
         #
         # if mid -1 is good , mid is bad and mid +1 is bad: return mid
-
-    low, high = 0, n-1
-
-    while low<=high:
-
-        mid = (low+(high-low))//2
-        print(mid)
-
-        if isBadVersion(mid) and isBadVersion(mid-1):
-            print("goo")
-            high = mid-2
-        if( isBadVersion(mid) == False) and (isBadVersion(mid-1) == False):
-            low = mid+1
-        if isBadVersion(mid) and not isBadVersion(mid-1):
-            return low
-
-
+    low=1
+    high=n
+    while low<high:
+        mid=low+((high-low)//2)
+        if isBadVersion(mid):
+            high=mid
+        else:
+            low=mid+1
+    return low
 
         # check if version half is bad ... and version half -1 is bad : if so n will be half -1
         #
         # check if version half is bad and version half -1 is good and return version half
 
 
-def isBadVersion(n):
-    if n >= 1702766719: return True
+def isBadVersion(x):
+    if x >= 6: return True
 
 
 
@@ -69,6 +61,6 @@ def isBadVersion(n):
  #    if true check bottom half with the n included
  #    if false check upper half with n excluded
 
-n =2126753390
+n = 15
 
 print(firstBadVersion(n))
