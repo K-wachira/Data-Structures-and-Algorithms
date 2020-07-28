@@ -18,7 +18,7 @@ def firstMissingPositive(nums):
 
 if __name__ == '__main__':
     listelements = [int(k) for k in input().split()]
-    (firstMissingPositive(listelements))
+    print(firstMissingPositive(listelements))
 
 
 
