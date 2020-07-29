@@ -12,7 +12,21 @@ def tribonacci(signature, n):
         signature.append(signature[i+2]+signature[i+1]+ signature[i])
     return signature[:n]
 
+def tribonacci2(s,n):
+    if n ==0: return []
+    for i in range(2,n):
+        s.append(s[i-2]+s[i-1]+s[i])
+    return (s)
+
+def tribonacci3(signature,n):
+    while len(signature) <n:
+        signature.append(sum(signature[-3:])) #slice the signature to the last three digits
+        # and append their sum
+    return (signature)
+
 
 signature = [1, 1, 1]
 n = 10
-print(tribonacci(signature, n))
+# print(tribonacci(signature, n))
+print(tribonacci2(signature,n))
+print(tribonacci3(signature,n))
