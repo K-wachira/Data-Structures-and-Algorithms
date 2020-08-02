@@ -52,9 +52,13 @@ To clone and run this scripts and notebooks, you'll need
 Installed on your computer.
 
 ***
+#Exam
 ![First Bad Version](https://raw.githubusercontent.com/K-wachira/Data-Structures-and-Algorithms/master/PrtSc/First%20Bad%20Version.png)
 ***
 ![Contains Dublicate](https://raw.githubusercontent.com/K-wachira/Data-Structures-and-Algorithms/master/PrtSc/Contans%20Dublicate.png)
+***
+![Letter Combination](https://raw.githubusercontent.com/K-wachira/Data-Structures-and-Algorithms/master/PrtSc/Letter%20Combination.png)
+
     
 ***
 ## Key_Algorithms_Covered
