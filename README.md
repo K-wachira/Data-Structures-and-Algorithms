@@ -52,9 +52,9 @@ To clone and run this scripts and notebooks, you'll need
 Installed on your computer.
 
 ***
-[1](https://imgur.com/AWJu7X0)
-
-![Install Aimeos TYPO3 extension](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-install.png)
+![First Bad Version](https://raw.githubusercontent.com/K-wachira/Data-Structures-and-Algorithms/master/PrtSc/First%20Bad%20Version.png)
+***
+![Contains Dublicate](https://raw.githubusercontent.com/K-wachira/Data-Structures-and-Algorithms/master/PrtSc/Contans%20Dublicate.png)
     
 ***
 ## Key_Algorithms_Covered
