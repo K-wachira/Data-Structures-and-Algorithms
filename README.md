@@ -93,7 +93,9 @@ About me::
 [GitHub Profile](https://github.com/K-wachira)
 ***
 
+# Change Log 
 
+13th Aug 2020 - Started adding Question Lema on tough Questions
 
 
 
