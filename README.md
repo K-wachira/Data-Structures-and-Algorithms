@@ -95,7 +95,12 @@ About me::
 
 # Change Log 
 
-13th Aug 2020 - Started adding Question Lema on tough Questions
+13th Aug 2020 - Started adding Question [Lemma](https://en.wikipedia.org/wiki/Lemma_(mathematics)) on tough Questions
+
+25th Jul 2020 - Included Code Signal Competitions
+
+21st Jul 2020 - Migrated from pycharm--classic to Jupyter labs
+
 
 
 
