@@ -101,7 +101,9 @@ About me::
 
 21st Jul 2020 - Migrated from pycharm--classic to Jupyter labs
 
+1st Feb 2021 - Started 100 days of 'Cracking the Coding Interview' book 
 
+21st Feb 2021 - Finding it hard to keep up with doing ALgorithms per day
 
 
 
