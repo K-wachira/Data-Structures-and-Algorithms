@@ -30,15 +30,13 @@ array2 =[1, 3, 5, 6, 7, 8, 9, 9, 1, 3, 5, 6, 7, 8, 9, 10, 1, 3, 5, 6, 7, 8, 9, 1
 
 
 # Testing 
-
 # Case 1 
 if matchingSocks(array1) == 10:
-    print("Test case 1 passed")
+    print("Test case 1 passed having returned {10} pairs")
 else:
     print("Test case 1 Failed")
-
 #Case 2
 if matchingSocks(array2) == 36:
-    print("Test case 2 passed")
+    print("Test case 2 passed having returned {36} pairs")
 else:
     print("Test case 2 Failed")
