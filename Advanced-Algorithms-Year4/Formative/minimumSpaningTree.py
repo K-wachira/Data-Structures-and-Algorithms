@@ -1,50 +1,36 @@
 import heapq
+
 class Solution:
-    def minCostConnectPoints(self, points):
+    def MST(self, points):
         if not points or len(points) == 0:
             return 0
         size = len(points)
         pq = []
-        visited = set()
+        visited = [False] * size
         result = 0
         count = size - 1
         # Add all edges from points[0] vertexs
-        # x1, y1 = points[0]
-        # for j in range(1, size):
-        #     # Calculate the distance between two coordinates.
-        #     cost= points[j][2]
-        #     # cost = abs(x1 - x2) + abs(y1 - y2)
-        #     edge = Edge(0, j, cost)
-        #     pq.append(edge)
+        x1, y1 = points[0]
+        for j in range(1, size):
+            # Calculate the distance between two coordinates.
+            x2, y2 = points[j]
+            cost = abs(x1 - x2) + abs(y1 - y2)
+            edge = Edge(0, j, cost)
         
-        # for item in points:
-        #     start = item[0]
-        #     end = item[1]
-        #     weight = item[2]
-        #     edge = Edge( start, end, weight)
-        #     pq.append(edge)
-
-        pq = [Edge(points[0], points[1], points[2])]
+            pq.append(edge)
+        
         # Convert pq to a heap.
         heapq.heapify(pq)
-        for i in range(len(pq)):
-            print(pq[i].point1, pq[i].point2, pq[i].cost)
 
-        
+        visited[0] = True
         while pq and count > 0:
             edge = heapq.heappop(pq)
             point1 = edge.point1
             point2 = edge.point2
-            visited.add(point1)
             cost = edge.cost
-            if point 2 not in visited:
+            if not visited[point2]:
                 result += cost
-                visited.add(point2)
-
-                for item in points:
-                    
-
-                
+                visited[point2] = True
                 for j in range(size):
                     if not visited[j]:
                         distance = abs(points[point2][0] - points[j][0]) + \
@@ -63,19 +49,8 @@ class Edge:
         return self.cost < other.cost
     
 
-points = [
-[6, 1, 10],
-[6, 5, 25],
-[5, 7, 24],
-[5, 4, 22],
-[7, 2, 14], 
-[7, 4, 18],
-[4, 3, 12],
-[3, 2, 16],
-[1, 2, 28]
-]
-
-# points = [[0, 0], [2, 2], [3, 10], [5, 2], [7, 0]]
+points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
 solution = Solution()
-print(f"points = {points}")
-print(f"Minimum Cost to Connect Points = {solution.minCostConnectPoints(points)}")
+total = solution.MST(points)
+
+print(total)
