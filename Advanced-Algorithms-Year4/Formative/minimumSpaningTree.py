@@ -50,7 +50,7 @@ class Edges:
     
 
 points1 = [[0,0],[2,2],[3,10],[5,2],[7,0]]
-points2 = [] 
+points2 =  [[0,0],[1,1],[1,0],[-1,1]]
 
 solution1 = Solution()
 total1 = solution1.MST(points1)
@@ -69,11 +69,13 @@ if total1 == 20:
 else:
     print("Test case 1 Failed")
 #Case 2
-# if matchingSocks(array2) == 36:
-#     print("Running Test case 1")
-#     print("Test case 2 passed having returned {36} pairs")
-# else:
-#     print("Test case 2 Failed")
+print(total2)
+if total2 == 4:
+    print("Running Test case 2")
+    print("Test case 2 passed having returned 4 cost of the MST tree for this graph : ")
+    print("\n    :", points2)
+else:
+    print("Test case 2 Failed")
 
 
 
