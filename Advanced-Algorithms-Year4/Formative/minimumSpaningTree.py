@@ -49,8 +49,32 @@ class Edge:
         return self.cost < other.cost
     
 
-points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
-solution = Solution()
-total = solution.MST(points)
+points1 = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+points2 = [] 
 
-print(total)
+solution1 = Solution()
+total1 = solution1.MST(points1)
+
+
+solution2 = Solution()
+total2 = solution2.MST(points2)
+
+
+# Testing 
+# Case 1 
+if total1 == 20:
+    print("Running Test case 1")
+    print("Test case 1 passed having returned 20 cost of the MST tree for this graph : ", end=" ")
+    print("\n    :", points1)
+else:
+    print("Test case 1 Failed")
+#Case 2
+# if matchingSocks(array2) == 36:
+#     print("Running Test case 1")
+#     print("Test case 2 passed having returned {36} pairs")
+# else:
+#     print("Test case 2 Failed")
+
+
+
+
