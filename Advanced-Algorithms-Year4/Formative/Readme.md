@@ -10,6 +10,7 @@ It is a greedy algo because :
     If there are more than one edges having same weight then all possible spanning trees are required to be found for final minimal tree.
 ```
 
+## This algorithm will fail if its given an input that is not a 2 dimensional array with only integers.
 ---
 
 # Test case 1
