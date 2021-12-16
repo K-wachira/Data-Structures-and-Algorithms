@@ -1,4 +1,4 @@
-
+import sys
 # this function, takes in a string p, and adds the all the numbers in the value p
 # creating a new string which becomes out new p
 # this process is repreted recursively untill p is of len 1, or p is less than 10 
@@ -36,10 +36,18 @@ def concatenate(k, n):
 # Main function that takes in k and n , where k is an int and n is a string 
 def main(k , n):
     p = concatenate( k, n ) # create value p
-
+    print("The p value being worked on is : ", p)
     supper = super_digit(str(p)) # calculate supper digit of p
-
-    print(supper)
     return supper
 
-main( 4, "9875")
+
+inpt = open(sys.argv[1]) 
+for line in inpt:
+    line = line.split()
+    k = int(line[0])
+    n = str(line[1])
+    print("Running test case where n is {} and k is {}".format(n, k), end="\n")
+    supper_digit = main(k , n)
+    print("Supper digit to the p value above is : ", supper_digit)
+
+    print("*"*15, "\n\n")

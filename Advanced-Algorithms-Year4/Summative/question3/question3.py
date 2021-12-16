@@ -1,4 +1,4 @@
-    
+import sys
 def creategrid(r, c):
     grid = []
     for i in range(r):
@@ -8,7 +8,7 @@ def creategrid(r, c):
         grid.append(rows)
     return grid 
 
-def gencrypt(r,text):
+def encrypt(r,text):
     c = len(text)
     grid  = creategrid(r, c)
     col = 0
@@ -24,25 +24,17 @@ def gencrypt(r,text):
             row = 0
     return grid
 
-
-def gdencrypt(r,text):
-    c = len(text)
-    grid  = creategrid(r, c)
+def dencrypt(r,message):
+    word = ""
     col = 0
     row = 0
-    index = 0 
-    while  col < c:
-        letter = text[index]
-        letter = grid[row][col]
-
+    while  col < len(message[0]):
+        word += message[row][col]
         col +=1 
-        row +=1 
-        index +=1
+        row+=1
         if row == r:
             row = 0
-    return grid
-
-
+    return word
 
 def printEncryptedMessage(grid):
     output = ""
@@ -59,41 +51,16 @@ def printGrid(grid):
 
 
 
-import math
+inpt = open(sys.argv[1]) 
+for line in inpt:
+    line = line.split()
+    key = int(line[0])
+    text = str(" ".join(line[1:]))
+    print("Running test case where Key is {} and message is {}".format(key, text), end="\n")
+    message_encrypted = encrypt( key, text)
+    print("Encrypted message is : ", printEncryptedMessage(message_encrypted))
+    message_decrypted = dencrypt( key, message_encrypted)
+    print("Decrypted message is : ", message_decrypted)
 
-def encryptText(key, text):
-    end = len(text)
-    rotation = 0 
-    pos = 0
-    index = 0
-    encrypted_message  = ""
-    while index < end:
-        encrypted_message += text[pos]
-        pos = pos + key
-        index += 1
-        if pos >= end:
-            rotation +=1
-            pos = rotation
-    return encrypted_message
+    print("*"*15, "\n\n")
 
-
-
-
-def dencryptText(key, text):
-    slow= 0 
-    fast = math.floor(len(text)/key)
-    out = ""
-    while fast < len(text):
-        out += text[slow]
-        out +=  text[fast]
-        slow+=1 
-        fast+= 1
-    return out
-
-encrypted_message = encryptText(4, "Plain text" )
-print(encrypted_message)
-xx = gencrypt( 4, "Plain text")
-print(printEncryptedMessage(xx))
-
-# dencrypted_message= dencryptText(3,encrypted_message )
-# print( dencrypted_message)

@@ -1,4 +1,4 @@
-
+import sys
 # function takes in a grade and return the 
 # appropriate score acording to the defined grading system in the prompt
 def gradingStudents(grade):
@@ -14,3 +14,16 @@ def gradingStudents(grade):
 
 
 
+def main(grades):
+    print("Original grade |  Rounded grades")
+    for grade in grades:
+        print(grade, "            |     ", gradingStudents(grade))
+
+
+inpt = open(sys.argv[1]) 
+for line in inpt:
+    line = line.split()
+    grades = [int(i) for i in line]
+    print("Running test case where grades are {}".format(line), end="\n\n")
+    main(grades)
+    print("***********************")

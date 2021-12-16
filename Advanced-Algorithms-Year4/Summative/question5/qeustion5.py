@@ -1,48 +1,77 @@
-from collections import defaultdict
+#!/bin/python3
 
-import heapq
+import math
+import os
+import random
+import re
+import sys
+
+def prettyfy(dict):
+    for k, v in dict.items():
+        print("smallest cost of distance from start node to {} is {}".format(k, v))
+
+# Complete the shortestReach function below.
+def shortestReach(n, edges, s):
+    visited = set()
+    frontier = []
+    # To test if new node exists in frontier
+    frontier_set = set()
+    distances = {}
+    
+    # Initialize dict of nodes
+    for node in range(1, n+1):
+        if node == s:
+            distances[node] = 0
+        else:
+            distances[node] = float('inf')
+    
+    current = s
+    current_dist = 0
+    
+    while current not in visited:
+        visited.add(current)
+        for edge in edges:
+            if current == edge[0]:
+                neighbor = edge[1]
+            elif current == edge[1]:
+                neighbor = edge[0]
+            else:
+                continue
+            distance = current_dist + edge[2]
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+            if neighbor not in frontier_set:
+                frontier.append((distance, neighbor))
+                frontier_set.add(neighbor)
+        
+        # Mimic a priority queue
+        frontier = sorted(frontier)
+                
+        current = frontier.pop(0)
+        current, current_dist = current[1], current[0]
+        frontier_set.remove(current)
+    
+    del distances[s]
+    for item in distances:
+        if distances[item] == float('inf'):
+            distances[item] = -1
+    return distances
+ 
 
 
-def dijkstra(S, N, G):
-    D    = {}
-    H    = [(0, S)]
-
-    for n in range(1, N + 1):
-        D[n] = float('inf')
-
-    D[S] = 0
-
-    while H:
-        t = heapq.heappop(H)
-        for h in G[t[1]]:
-            if D[h[0]] > D[t[1]] + h[1]:
-                D[h[0]] = D[t[1]] + h[1]
-                if (h[1], h[0]) in H:
-                    H.remove((h[1], h[0]))
-                    heapq.heapify(H)
-                heapq.heappush(H, (D[h[0]], h[0]))
-
-    return D
 
 
-def main():
-    T = int(input())
+input  = open(sys.argv[1]) 
+edges = []
+for line in input:
+    ln = line.split()
+    if len(ln) == 2:
+        Nodes = int(ln[0])
+        Edges = int(ln[1])
+    if len(ln) == 3:
+        edges.append(list(map(int, line.rstrip().split())))
+    if len(ln) == 1:
+        start = int(ln[0])
 
-    for _ in range(T):
-        N, M = [int(i) for i in input().split()]
-
-        G    = defaultdict(set)
-
-        for _ in range(M):
-            e = [int(i) for i in input().split()]
-            G[e[0]].add((e[1], e[2]))
-            G[e[1]].add((e[0], e[2]))
-
-        S    = int(input())
-
-        D    = dijkstra(S, N, G)
-        print(' '.join(str(D[n]) if D[n] != float('inf') else '-1' for n in range(1, N + 1) if n != S))
-
-
-if __name__ == "__main__":
-    main()
+result = shortestReach(Nodes, edges, start)
+prettyfy(result)
