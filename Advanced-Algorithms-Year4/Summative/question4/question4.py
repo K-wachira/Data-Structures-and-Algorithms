@@ -4,13 +4,20 @@
 # this process is repreted recursively untill p is of len 1, or p is less than 10 
 
 def super_digit(p): 
-    if int(p) < 10: # base case that checks if p is less than 10 
-        return int(p) # return int if base case is true
-    else:
+    while int(p) > 9:
+        p = str(p)
         temp = 0 #this will be the new p if basecase is not true 
         for i in p: # loop p,
-            temp += int(i) # add all the values in p to create a new and smaller p
-        return super_digit(str(temp)) # recurse on the newly created p value.
+            temp += int(i)
+        p = temp
+    return int(p)
+    # if int(p) < 10: # base case that checks if p is less than 10 
+    #     return int(p) # return int if base case is true
+    # else:
+    #     temp = 0 #this will be the new p if basecase is not true 
+    #     for i in p: # loop p,
+    #         temp += int(i) # add all the values in p to create a new and smaller p
+    #     return super_digit(str(temp)) # recurse on the newly created p value.
 
 
 
@@ -30,9 +37,9 @@ def concatenate(k, n):
 def main(k , n):
     p = concatenate( k, n ) # create value p
 
-    supper = super_digit(p) # calculate supper digit of p
+    supper = super_digit(str(p)) # calculate supper digit of p
 
     print(supper)
     return supper
 
-main( 3, "148")
+main( 4, "9875")
