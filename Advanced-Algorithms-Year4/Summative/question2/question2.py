@@ -16,8 +16,9 @@ def gradingStudents(grade):
 
 def main(grades):
     print("Original grade |  Rounded grades")
-    for grade in grades:
-        print(grade, "            |     ", gradingStudents(grade))
+    for grade in grades: # loop through the grades. 
+        print(grade, "            |     ", gradingStudents(grade)) # print in a pretty manner 
+        
 
 
 inpt = open(sys.argv[1]) 

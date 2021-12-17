@@ -8,6 +8,9 @@ def sumOfN(n): # function definition
     return output # finally return the sum of the n numbers including the n 
 
 
+
+# This is taking in the inputs this script should be run on terminal and the should get a text file as an arguiment 
+
 inpt = open(sys.argv[1]) 
 for line in inpt:
     print("Running test case where n is {}".format(line), end="")

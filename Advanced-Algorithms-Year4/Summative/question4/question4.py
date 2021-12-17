@@ -4,10 +4,10 @@ import sys
 # this process is repreted recursively untill p is of len 1, or p is less than 10 
 
 def super_digit(p): 
-    while int(p) > 9:
+    while int(p) > 9: # k time complexity 
         p = str(p)
         temp = 0 #this will be the new p if basecase is not true 
-        for i in p: # loop p,
+        for i in p: # loop p, n
             temp += int(i)
         p = temp
     return int(p)
@@ -40,6 +40,7 @@ def main(k , n):
     supper = super_digit(str(p)) # calculate supper digit of p
     return supper
 
+# This is taking in the inputs this script should be run on terminal and the should get a text file as an arguiment 
 
 inpt = open(sys.argv[1]) 
 for line in inpt:
