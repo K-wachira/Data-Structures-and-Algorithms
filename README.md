@@ -105,6 +105,8 @@ About me::
 
 21st Feb 2021 - Finding it hard to keep up with doing ALgorithms per day
 
+1st June 2022 - Now that I am done with school, I aim on covering as much as possible, today is the third day of said journal.
+
 
 
 
