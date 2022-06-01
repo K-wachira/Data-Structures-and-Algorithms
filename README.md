@@ -61,7 +61,7 @@ Installed on your computer.
 
     
 ***
-## Key_Algorithms_Covered
+## Key_Algorithms_Covered (out of date)
 
     Bubble Sort
     Selection Sort
