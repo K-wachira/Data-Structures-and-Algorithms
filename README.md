@@ -107,6 +107,8 @@ About me::
 
 1st June 2022 - Now that I am done with school, I aim on covering as much as possible, today is the third day of said journal.
 
+One month to graduation
+
 
 
 
